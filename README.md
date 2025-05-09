@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Supreme Group Website Documentation
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+The Supreme Group website is a modern, responsive corporate website built with Next.js 15, React 19, and TailwindCSS 4, featuring dynamic animations and a professional design.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Setup Instructions
+
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Development: `npm run dev` (uses Turbopack)
+4. Production: `npm run build` && `npm run start`
+
+## Component Architecture Overview
+
+### Project Structure
+
+```
+├── public/          # Static assets
+├── src/
+│   ├── app/         # Next.js App Router
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── globals.css
+│   └── components/  # Reusable components
+│       ├── ContactSection.tsx
+│       ├── footer-column.tsx
+│       ├── footer.tsx
+│       ├── HeroSection.tsx
+│       ├── logo.tsx
+│       ├── ScrollProgress.tsx
+│       ├── SolutionsSection.tsx
+│       ├── vehicle-section-scroll.tsx
+│       └── VideoBackground.tsx
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Layout Components**: Base layout with global elements
+- **Page Component**: Homepage with sections
+- **UI Components**:
+  - `HeroSection.tsx` - Main hero area
+  - `VideoBackground.tsx` - Video background implementation
+  - `SolutionsSection.tsx` - Services showcase
+  - `ContactSection.tsx` - Contact information
+  - `footer.tsx` - Site footer
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Performance Optimization Techniques
 
-## Learn More
+- Next.js App Router with Server Components for reduced client-side JavaScript
+- Optimized video background with playback rate controls
+- Framer Motion animations optimized for performance
+- Next.js Image component for automatic image optimization
+- Turbopack for faster builds
 
-To learn more about Next.js, take a look at the following resources:
+## Accessibility Considerations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site implements semantic HTML, proper heading hierarchy, and sufficient color contrast to ensure accessibility compliance.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Third-Party Libraries Used
 
-## Deploy on Vercel
+- **Next.js 15.3.2**: React framework with App Router
+- **React 19.0.0**: UI component library
+- **Framer Motion 12.10.4**: Animation library for smooth transitions
+- **Lucide React 0.508.0**: Icon library
+- **TailwindCSS 4.0.0**: Utility-first CSS framework
+- **TypeScript 5.x**: Type safety
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Challenges & Solutions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Video Background Implementation
+
+**Issue**: Performance concerns with video background, especially on mobile.
+**Solution**: Implemented playback rate controls and ensured proper z-index layering.
+
+### Animation Performance
+
+**Issue**: Ensuring smooth animations across devices.
+**Solution**: Leveraged Framer Motion's capabilities to optimize rendering and reduce layout shifts.
+
+## Future Improvements
+
+- Add more pages to complete the site structure
+- Implement parallax scrolling effects for enhanced UI/UX
+- Integrate a contact form with backend functionality
+- Add project showcase gallery
+- Improve mobile navigation experience
+
+## Additional Remarks
+
+The Supreme Group website was built with a focus on visual appeal and performance. The component architecture allows for easy expansion and maintenance as the project grows.
